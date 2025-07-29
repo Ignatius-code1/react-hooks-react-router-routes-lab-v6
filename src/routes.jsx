@@ -1,4 +1,3 @@
-import React from "react";
 import Home from "./pages/Home";
 import Directors from "./pages/Directors";
 import Actors from "./pages/Actors";
@@ -13,18 +12,15 @@ const routes = [
   },
   {
     path: "/directors",
-    element: <Directors />,
-    errorElement: <ErrorPage />
+    element: <Directors />
   },
   {
     path: "/actors",
-    element: <Actors />,
-    errorElement: <ErrorPage />
+    element: <Actors />
   },
   {
     path: "/movie/:id",
-    element: <Movie />,
-    errorElement: <ErrorPage />
+    element: <Movie />
   }
 ];
 
