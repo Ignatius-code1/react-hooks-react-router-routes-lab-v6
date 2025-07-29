@@ -3,7 +3,11 @@ import NavBar from "../components/NavBar";
 import MovieCard from "../components/MovieCard";
 
 function Home() {
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState([
+    { id: 1, title: "Doctor Strange" },
+    { id: 2, title: "Trolls" },
+    { id: 3, title: "Jack Reacher: Never Go Back" }
+  ]);
 
   useEffect(() => {
     fetch("http://localhost:4000/movies")

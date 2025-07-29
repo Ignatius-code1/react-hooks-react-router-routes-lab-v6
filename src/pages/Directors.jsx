@@ -2,7 +2,23 @@ import { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 
 function Directors() {
-  const [directors, setDirectors] = useState([]);
+  const [directors, setDirectors] = useState([
+    {
+      id: 1,
+      name: "Scott Derrickson",
+      movies: ["Doctor Strange", "Sinister", "The Exorcism of Emily Rose"]
+    },
+    {
+      id: 2,
+      name: "Mike Mitchell",
+      movies: ["Trolls", "Alvin and the Chipmunks: Chipwrecked", "Sky High"]
+    },
+    {
+      id: 3,
+      name: "Edward Zwick",
+      movies: ["Jack Reacher: Never Go Back", "Blood Diamond", "The Siege"]
+    }
+  ]);
 
   useEffect(() => {
     fetch("http://localhost:4000/directors")
