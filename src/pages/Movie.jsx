@@ -9,8 +9,7 @@ function Movie() {
   useEffect(() => {
     fetch(`http://localhost:4000/movies/${id}`)
       .then(r => r.json())
-      .then(data => setMovie(data))
-      .catch(err => console.error("Failed to fetch movie:", err));
+      .then(data => setMovie(data));
   }, [id]);
 
   return (

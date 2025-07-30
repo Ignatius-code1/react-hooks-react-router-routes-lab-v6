@@ -7,8 +7,7 @@ function Actors() {
   useEffect(() => {
     fetch("http://localhost:4000/actors")
       .then(r => r.json())
-      .then(data => setActors(data))
-      .catch(err => console.error("Failed to fetch actors:", err));
+      .then(data => setActors(data));
   }, []);
 
   return (
@@ -22,7 +21,7 @@ function Actors() {
           <article key={actor.id}>
             <h2>{actor.name}</h2>
             <ul>
-              {actor.movies && actor.movies.map((movie, index) => (
+              {actor.movies.map((movie, index) => (
                 <li key={index}>{movie}</li>
               ))}
             </ul>

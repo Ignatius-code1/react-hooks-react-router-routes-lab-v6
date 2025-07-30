@@ -8,8 +8,7 @@ function Home() {
   useEffect(() => {
     fetch("http://localhost:4000/movies")
       .then(r => r.json())
-      .then(data => setMovies(data))
-      .catch(err => console.error("Failed to fetch movies:", err));
+      .then(data => setMovies(data));
   }, []);
 
   return (
