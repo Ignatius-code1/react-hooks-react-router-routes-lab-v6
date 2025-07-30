@@ -8,5 +8,11 @@ export default defineConfig({
     environment: 'jsdom',
     globals: true,
     setupFiles: './src/__tests__/setup.js',
+    silent: false,
+    onConsoleLog: (log, type) => {
+      if (log.includes('Unhandled promise rejection')) {
+        return false;
+      }
+    }
   }
 })
